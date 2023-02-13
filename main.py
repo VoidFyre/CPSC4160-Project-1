@@ -1,5 +1,9 @@
 import pygame
+import view
+import gameLoop
 
-class main():
-    def __init__(self):
-        pass
+pygame.init()
+pygame.display.set_caption("P O N G")
+surface = pygame.display.set_mode(view.SCREEN_SIZE)
+
+gameLoop.game_loop(surface)
