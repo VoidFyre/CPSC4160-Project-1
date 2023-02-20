@@ -1,6 +1,6 @@
 import pygame
 
-speed = 1
+speed = 5
 
 def p1Move(player1):
     keys = pygame.key.get_pressed()
