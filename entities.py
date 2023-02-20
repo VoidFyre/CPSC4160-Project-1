@@ -15,25 +15,23 @@ p2Pos = p2X, p2Y = 780, 0
 player2 = pygame.Rect(p2X, p2Y, p2W, p2H)
 
 
-
-
-class Ball(pygame.sprite.Sprite):
-    def __init__(self, color, width, height):
+class Paddle:
+    def __init__(self, x, y):
         super().__init__()
 
-        self.image = pygame.Surface([width, height])
-        self.image.fill(color)
-        self.image.set_colorkey(color)
-
+class Ball(pygame.Rect):
+    def __init__(self):
+        self.x, self.y = 300, 400
+        self.color = (255,255,255)
+        self.width, self.height = 10, 10
         self.ballVelocity = [randint(4,8), randint(-8,8)]
 
-        self.rect = self.image.get_rect()
+    def drawBall(self, surface):
+            pygame.draw.rect(surface, self.color, [0, 0, self.width, self.height])
 
-        pygame.draw.rect(self.image, color, [0, 0, width, height])
-
-        def updateBall(self):
-            self.rect.x += self.ballVelocity[0]
-            self.rect.y += self.ballVelocity[1]
-        def bounceBall(self):
-            self.rect.x += -self.ballVelocity[0]
-            self.rect.y += randint(-8,8)
+    def updateBall(self):
+            self.x += self.ballVelocity[0]
+            self.y += self.ballVelocity[1]
+    def bounceBall(self):
+            self.x += -self.ballVelocity[0]
+            self.y += randint(-8,8)
