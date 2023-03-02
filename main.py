@@ -1,9 +1,12 @@
-import pygame
-import view
-import gameLoop
+from controller.game import Game
 
-pygame.init()
-pygame.display.set_caption("P O N G")
-surface = pygame.display.set_mode(view.SCREEN_SIZE)
+class Main:
+    def main(self):
+        self.g = Game()
 
-gameLoop.game_loop(surface)
+        while self.g.running:
+            self.g.curr_menu.display_menu()
+            self.g.game_loop()
+
+if __name__ == "__main__":
+    Main().main()
