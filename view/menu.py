@@ -113,10 +113,10 @@ class StartMenu(Menu):
         elif self.game.UP_KEY or self.game.DOWN_KEY:
             if self.state == 'Single Player':
                 self.state = 'Multiplayer'
-                self.cursor_rect.midtop = (self.startmenux + self.offset, self.startmenuy)
+                self.cursor_rect.midtop = (self.splayerx + self.offset, self.splayerx)
             elif self.state == 'Multiplayer':
                 self.state = 'Single Player'
-                self.cursor_rect.midtop = (self.volx + self.offset, self.voly)
+                self.cursor_rect.midtop = (self.mplayerx + self.offset, self.mplayerx)
         elif self.game.START_KEY:
             print("states:", self.state)
             if self.state == 'Single Player':
