@@ -1,5 +1,5 @@
 # Pong Game 
- Made with lots of love <3 by Mohit Singh, Damyon Olson and Noah Doering
+ Made with lots of love <3 by ** Mohit Singh, Damyon Olson and Noah Doering **
 
 This is a simple implementation of the classic Pong game using Python and Pygame.
 
