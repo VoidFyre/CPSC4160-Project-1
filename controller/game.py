@@ -1,4 +1,4 @@
-
+from os.path import abspath
 from model.paddle import Paddle
 from model.ball import Ball
 
@@ -49,9 +49,9 @@ class Game():
         self.all_sprites_list.add(self.paddleB)
         self.all_sprites_list.add(self.ball)
 
-        self.paddle_sound = pygame.mixer.Sound("./resources/ping-contact.mp3")
+        self.paddle_sound = pygame.mixer.Sound(abspath('resources/ping-contact.mp3'))
         # load the applause sound
-        self.applause_sound = pygame.mixer.Sound("./resources/small-applause.mp3")
+        self.applause_sound = pygame.mixer.Sound(abspath('resources/small-applause.mp3'))
 
     def game_loop(self):
         while self.playing:

@@ -1,4 +1,5 @@
 import pygame
+from os.path import abspath
 
 class Menu():
     def __init__(self, game):
@@ -8,7 +9,7 @@ class Menu():
         self.cursor_rect = pygame.Rect(0, 0, 20, 20)
         self.offset = - 100
 
-        self.background_image = pygame.image.load("../../resources/ping_pong_background.png")
+        self.background_image = pygame.image.load(abspath('resources/ping_pong_background.png'))
         self.background_image = pygame.transform.scale(self.background_image , (self.game.DISPLAY_W, self.game.DISPLAY_H))
 
     def draw_cursor(self):
