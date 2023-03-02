@@ -15,9 +15,9 @@ Pong is a two-dimensional sports game that simulates table tennis. The player co
 
 ## Program Versions
 
-- OS: MacBook Air
-- Python: 3.9.6
-- Pygame: 2.1.2
+- OS: Ubuntu 20.04.5 LTS
+- Python: 3.8.10
+- Pygame: 1.9.6
 
 ## The motivation behind the game chosen
 
