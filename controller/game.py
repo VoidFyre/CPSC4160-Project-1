@@ -49,9 +49,9 @@ class Game():
         self.all_sprites_list.add(self.paddleB)
         self.all_sprites_list.add(self.ball)
 
-        self.paddle_sound = pygame.mixer.Sound(abspath('resources/ping-contact.mp3'))
+        self.paddle_sound = pygame.mixer.Sound(abspath('resources/ping-contact.ogg'))
         # load the applause sound
-        self.applause_sound = pygame.mixer.Sound(abspath('resources/small-applause.mp3'))
+        self.applause_sound = pygame.mixer.Sound(abspath('resources/small-applause.ogg'))
 
     def game_loop(self):
         while self.playing:
