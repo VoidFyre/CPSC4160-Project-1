@@ -46,6 +46,14 @@ The game is structured using the object-oriented programming paradigm. The game 
 ### Image of classes and functions and connections
 ![UML_Diagram](./resources/UML.png)
 
+In relation to the rubric, the requirements were to have a Main, Game Loop, Model, View, Controller, and Entities - 
+During the project, we opted to keep Main, Controller, Model, and View.
+Main is where the game launches officially.
+The Controller folder contains our Game() class, which acts as both the Game Loop, View and Controller for the game.
+The Model folder contains the classes for both Ball and Paddle which are used by Game() in the game loop. Ball and Paddle update within the gameloop.
+The View folder contains the Menue class which displays MainMenu, StartMenu, and Credits.
+Main is not inside of any folder, and is used to run the entire program. Main calls to Game() which calls to Menu().
+
 ## Issues and Solutions
 ### Paddle clipping through ball
 It seems like the paddle sprite is clipping through the ball sprite sometimes. This could be happening because the collision detection is not accurate or because the sprites are not positioned correctly.
